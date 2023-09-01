@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add feed</title>
+</head>
+<body>
+    <h3>Add new post</h3>
+    <a href="/feed">Home</a>
+    <form action="/submit-new-feed" method="POST">
+        <p>Name</p>
+        <input type="text" name="name" placeholder="Enter Your Name" maxlength="15" required>
+        <br/><br>
+        <p>Message</p>
+        <input type="text" name="message" placeholder="Enter what id in your mind" maxlength="40" required>
+        <br/><br>
+        <button class="btn btn-outline-primary">Add Feed</button>
+    </form>
+    <% if(err){ %>
+        <%= err %>
+    <%}%>
+</body>
+</html>

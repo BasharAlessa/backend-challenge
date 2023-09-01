@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <title>Edite Feed</title>
+</head>
+<body>
+    <a href="/feed">Home</a>
+    <br/><br>
+<h3>Edit a Post</h3>
+    <form action="/submit-edit/<%= info.id %>" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" value="<%= info.name%>" maxlength="15" required>
+
+        <br/><br>
+        <label for="message">Message</label>
+        <input type="text" id="message" name="message" placeholder="Enter what id in your mind" value="<%= info.message %>" maxlength="40"required>
+        <button class="btn btn-outline-primary">Submit</button>
+    </form>
+    
+</body>
+</html>
